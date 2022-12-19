@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
   }
+
+.container p, h1, h2, h3, h4 ,h5 ,h6{
+    font-family: 'Chivo Mono', monospace;
+
+}  
 
 .container{
     height: 100%;
@@ -21,7 +28,7 @@
 }
 
 .header{
-    background-color: aliceblue;
+    background-color: #963484;
     gap: 10px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -30,12 +37,19 @@
     padding: 5px;
 }
 
+#search-icon{
+    align-self: center;
+    justify-self: end;
+    grid-column: 1 / 2;
+}
 
 #search{
-    border-radius: 5px;
-    grid-column: 1 / 4;
+    appearance: none;
+    background-color:#DCDCE8;
+    border-radius: 10px;
+    grid-column: 2 / 4;
     height: 30%;
-    width: 80%;
+    width: 100%;
     justify-self: end;
     align-self: center;
 }
@@ -50,13 +64,22 @@
 
 }
 
-#noti img[alt="noti"]{
-grid-column: 1 / 2;
+#noti > h2{
+    justify-self: start;
 }
 
-#noti img[alt="profile"]{
-    grid-column: 2 / 3;
+#noti img[src="anas.jpg"]{
+    height: 45px;
+    width: 45px;
+    border-radius: 20px;
 }
+
+#profile img[src="anas.jpg"]{
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+}
+
 
 #noti > h2{
     grid-column: 3 / 4;
@@ -66,6 +89,8 @@ grid-column: 1 / 2;
     gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
+    padding-bottom: 5px;
     grid-column: 5 / 7;
     grid-row: 2 / 3;
 
@@ -73,7 +98,6 @@ grid-column: 1 / 2;
 
 #btns > button{
     background-color:aqua;
-    align-self: flex-start;
     height: 50%;
     width: 100%;
     border-radius: 20px;
@@ -108,18 +132,20 @@ grid-column: 3 / 4;
     grid-row: 1 / 3;
 }
 
-#profile h6{
+#profile h5{
+    text-align: start;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
 #profile h2{
+    text-align: start;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
 .sidebar{
-    background-color:blueviolet;
+    background-color:#60afff;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 }
@@ -131,13 +157,15 @@ text-align: center;
 }
 
 .sidebar-container{
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: start;
     grid-template-columns: 1fr 1fr;
     display: grid;
 }
 
 .sidebar-container .title{
+    align-items: flex-start;
+    justify-content: start;
     color:aliceblue ;
     grid-column: 2 / 3;
     display: grid;
@@ -146,9 +174,11 @@ text-align: center;
 } 
 
 .sidebar-container .icon{
+    align-items: flex-end;
+    justify-content: center;
     grid-column: 1 / 2;
     display: grid;
-    gap: 40px;
+    gap: 35px;
     grid-template-rows: repeat(9, 1fr);
 } 
 
@@ -156,13 +186,13 @@ text-align: center;
     padding: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 7fr;
     background-color: brown;
     grid-row:2 / 3;
     grid-column: 2 / 3;
 }
 
-.main > h1{
+.main > h3{
     padding: 20px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -176,11 +206,26 @@ text-align: center;
     gap: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     grid-template-rows: repeat(3, 1fr);
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+}
+
+.cards div h3,p{
+    text-align:left;
+}
+
+.cards div p{
+    font-size: 14px;
+}
+
+.cards-icon{
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
 }
 
 .cards > div{
@@ -201,31 +246,34 @@ text-align: center;
 }
 
 .side-main .first{
+    gap: 5px;
     padding:5px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
     border-radius: 10px;
-    height: 100%;
+    height: fit-content;
     background-color: whitesmoke;
     grid-row: 1 / 2;
 }
 
 .side-main .second{
+    gap: 5px;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     border-radius: 10px;
-    height: 100%;
+    height: fit-content;
+    align-self: flex-start;
     background-color: whitesmoke;
     grid-row: 2 / 3;
 }
 
-.cards div h1,p{
-    text-align:left;
-}
 
 .side-main h2{
     text-align: start;
+}
+
+.side-main p{
+    font-size: 15px;
 }
 
 .second > div{
@@ -244,3 +292,4 @@ text-align: center;
 .second > div > h3{
     text-align: start;
 }
+
