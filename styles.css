@@ -72,13 +72,13 @@ a{
     justify-self: start;
 }
 
-#noti img[src="anas.jpg"]{
+#noti img[src="images/anas.jpg"]{
     height: 45px;
     width: 45px;
     border-radius: 20px;
 }
 
-#profile img[src="anas.jpg"]{
+#profile img[src="images/anas.jpg"]{
     height: 55px;
     width: 55px;
     border-radius: 30px;
@@ -297,7 +297,7 @@ align-self:center;
     align-self: flex-end;
 }
 
-img[src="odin.jpeg"], img[src="codeacademy.png"], img[src="codecamp.png"]{
+img[src="images/odin.jpeg"], img[src="images/codeacademy.png"], img[src="images/codecamp.png"]{
     width: 30px;
     height: 30px;
     border-radius: 20px;
