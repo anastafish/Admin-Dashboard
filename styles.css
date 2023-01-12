@@ -203,6 +203,7 @@ text-align: center;
     width: fit-content;
     text-align: start;
     font-weight: bolder;
+    font-size: 40px;
 }
 
 .main .cards{
@@ -287,7 +288,6 @@ align-self:center;
     grid-template-rows: repeat(3, 1fr);
     border-radius: 10px;
     background-color: whitesmoke;
-    align-self: flex-end;
 }
 
 img[src="images/odin.jpeg"], img[src="images/codeacademy.png"], img[src="images/codecamp.png"]{
